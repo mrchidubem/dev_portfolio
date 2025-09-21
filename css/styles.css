@@ -521,11 +521,6 @@ a:hover {
     margin: 0 !important;
     text-align: center !important;
   }
-  .nav-list-mobile .nav-theme-item {
-    order: 999; /* Push to bottom of mobile menu */
-    margin-top: auto;
-    padding-top: var(--space-lg);
-  }
   .nav-list-mobile .nav-theme-item .theme-btn {
     width: 3rem;
     height: 3rem;
@@ -538,7 +533,7 @@ a:hover {
     align-items: center;
     text-align: center;
   }
-  /* NEW: Match nav-link styling for theme toggle item to ensure visibility/prominence */
+  /* UPDATED: Match nav-link styling for theme toggle item to ensure visibility/prominence, positioned naturally after Contact (no order/margin-top) */
   .nav-list-mobile .nav-theme-item {
     display: flex;
     align-items: center;
@@ -2916,8 +2911,6 @@ input.error, select.error, textarea.error {
 .nav-link:focus, .btn:focus, .social-link:focus, .filter-btn:focus, .skip-link:focus, .service-link:focus, .insight-link:focus {
   outline: 2px solid rgb(var(--color-accent));
   outline-offset: 2px;
-
-
 }
 
 .header-inner:has(#nav-toggle:checked) .nav-mobile {
