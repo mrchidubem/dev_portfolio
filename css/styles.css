@@ -538,6 +538,31 @@ a:hover {
     align-items: center;
     text-align: center;
   }
+  /* NEW: Match nav-link styling for theme toggle item to ensure visibility/prominence */
+  .nav-list-mobile .nav-theme-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 20rem;
+    padding: var(--space-mobile-nav-item) 20px !important;
+    background: rgb(var(--color-surface));
+    border: 1px solid rgb(var(--color-border) / 0.2);
+    border-radius: var(--border-radius-lg);
+    margin: 0;
+    min-height: 48px;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+  .nav-list-mobile .nav-theme-item:hover {
+    background: rgb(var(--color-primary-500) / 0.1);
+    border-color: rgb(var(--color-primary-500) / 0.3);
+  }
+  .header-inner:has(#nav-toggle:checked) .nav-mobile {
+    right: 0 !important;
+    display: block !important;
+  }
 }
 
 .skip-link {
@@ -2715,7 +2740,6 @@ input.error, select.error, textarea.error {
     font-size: var(--text-base);
     padding: 0.75rem 1.5rem;
   }
-@media (max-width: 768px) {
   /* ... existing rules ... */
 
   .nav-list-mobile .nav-theme-item {
