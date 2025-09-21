@@ -2729,7 +2729,10 @@ input.error, select.error, textarea.error {
     font-size: var(--text-lg);
     border-width: 2px;
   }
-
+.header-inner:has(#nav-toggle:checked) .nav-mobile {
+  right: 0 !important;
+  display: block !important;
+}
   /* ... rest of existing rules ... */
 }
 
@@ -2893,6 +2896,10 @@ input.error, select.error, textarea.error {
 
 }
 
+.header-inner:has(#nav-toggle:checked) .nav-mobile {
+  right: 0 !important;
+  display: block !important;
+}
 
 .post-hero-image {
   width: 100%;
