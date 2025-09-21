@@ -10,6 +10,7 @@
  * FIXED: H. Enhanced error handling and listener cleanup to prevent console errors
  * FIXED: Mobile Theme Toggle - Added menu-state check for reliable dropdown toggling
  * UPDATED: For multi-page - Adjusted scroll navigation to page links, kept filter/form/theme
+ * UPDATED: Default to light theme on load (unless user saved dark)
  */
 
 class PortfolioApp {
@@ -129,9 +130,8 @@ class PortfolioApp {
       this.themeToggles = document.querySelectorAll('.theme-toggle');
       const html = document.documentElement;
       
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const savedTheme = localStorage.getItem('portfolio-theme');
-      let activeTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+      let activeTheme = savedTheme || 'light'; // Default to light theme
       
       html.setAttribute('data-theme', activeTheme);
       this.updateThemeIcon(activeTheme);

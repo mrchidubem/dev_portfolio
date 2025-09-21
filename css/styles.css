@@ -521,6 +521,17 @@ a:hover {
     margin: 0 !important;
     text-align: center !important;
   }
+  .nav-list-mobile .nav-theme-item {
+    order: 999; /* Push to bottom of mobile menu */
+    margin-top: auto;
+    padding-top: var(--space-lg);
+  }
+  .nav-list-mobile .nav-theme-item .theme-btn {
+    width: 3rem;
+    height: 3rem;
+    font-size: var(--text-lg);
+    border-width: 2px;
+  }
   .header-inner:has(#nav-toggle:checked) .nav-mobile .nav-list-mobile {
     padding: var(--space-2xl) var(--space-lg);
     gap: var(--space-mobile-nav-gap);
@@ -989,12 +1000,28 @@ a:hover {
 
 .section-subtitle {
   color: rgb(var(--color-text-muted));
-  font-size: var(--text-sm);
-  font-weight: 500;
+  font-size: var(--text-lg); /* Increased from --text-sm for bigger size */
+  font-weight: 700; /* Bolder */
+  font-family: var(--font-family-secondary); /* Stylish font */
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
   opacity: 1 !important;
   visibility: visible !important;
   text-align: left;
+  position: relative;
 }
+
+.section-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 2rem;
+  height: 2px;
+  background: var(--gradient-cta);
+  border-radius: 1px;
+}
+
 
 .about-grid {
   display: grid;
@@ -1018,6 +1045,16 @@ a:hover {
   line-height: 1.6;
   color: rgb(var(--color-text));
   font-weight: 500;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-align: left;
+}
+
+/* New class for dimmed paragraph text */
+.about-dim-text {
+  color: rgb(var(--color-text-muted)) !important;
+  line-height: 1.7;
+  font-size: var(--text-base);
   opacity: 1 !important;
   visibility: visible !important;
   text-align: left;
@@ -1063,6 +1100,11 @@ a:hover {
   font-size: var(--text-xs);
   font-weight: 600;
   line-height: 1.4;
+  font-family: var(--font-family-secondary); /* Stylish secondary font */
+  letter-spacing: 0.025em; /* Subtle spacing for elegance */
+  color: rgb(var(--color-text)); /* Full color for prominence */
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .skills-mosaic {
@@ -2834,31 +2876,6 @@ input.error, select.error, textarea.error {
 }
 
 
-.section-subtitle {
-  color: rgb(var(--color-text-muted));
-  font-size: var(--text-lg); /* Increased from --text-sm for bigger size */
-  font-weight: 700; /* Bolder */
-  font-family: var(--font-family-secondary); /* Stylish font */
-  letter-spacing: 0.025em;
-  text-transform: uppercase;
-  opacity: 1 !important;
-  visibility: visible !important;
-  text-align: left;
-  position: relative;
-}
-
-.section-subtitle::after {
-  content: '';
-  position: absolute;
-  bottom: -0.5rem;
-  left: 0;
-  width: 2rem;
-  height: 2px;
-  background: var(--gradient-cta);
-  border-radius: 1px;
-}
-
-
 .post-hero-image {
   width: 100%;
   height: 20rem;
@@ -2987,6 +3004,3 @@ input.error, select.error, textarea.error {
 .btn-primary::before {
   background: linear-gradient(135deg, rgb(30 58 138 / 0.05) 0%, rgb(13 148 136 / 0.05) 100%); /* Lighter opacity */
 }
-
-
-
