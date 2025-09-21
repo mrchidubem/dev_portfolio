@@ -2482,10 +2482,10 @@ input.error, select.error, textarea.error {
     background: rgb(var(--color-surface));
     padding: var(--space-md);
     text-align: center;
-    width: calc(100% + 2 * var(--container-gutter));
+    width: calc(100% + 2 * var(--space-md));
     max-width: none;
-    margin: 0 calc(-1 * var(--container-gutter)) 0;
-    border-radius: 0;
+    margin: 0 -1 * var(--space-md) 0;
+    border-radius: 0.25rem;
     box-shadow: var(--shadow-sm);
   }
   /* FIXED: Full-width stretch for profile image on mobile - rectangle for edge-to-edge */
@@ -2493,12 +2493,11 @@ input.error, select.error, textarea.error {
     width: 100%;
     height: 12rem;
     margin: 0 0 var(--space-md) 0;
-    border-radius: 0;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0; /* Rounded top only */
     overflow: hidden;
   }
   .profile-image {
     border-radius: inherit;
-    object-fit: contain;
   }
   .profile-ring {
     border-radius: inherit;
@@ -2795,10 +2794,10 @@ input.error, select.error, textarea.error {
   .profile-card {
     padding: var(--space-sm);
     text-align: center;
-    width: calc(100% + 2 * var(--container-gutter));
+    width: calc(100% + 2 * var(--space-md));
     max-width: none;
-    margin: 0 calc(-1 * var(--container-gutter)) 0;
-    border-radius: 0;
+    margin: 0 -1 * var(--space-md) 0;
+    border-radius: 0.25rem;
     box-shadow: var(--shadow-sm);
   }
   .container {
