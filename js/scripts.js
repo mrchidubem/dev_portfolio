@@ -13,6 +13,10 @@
  * UPDATED: Default to light theme on load (unless user saved dark)
  * UPDATED: Preload high-res images for crisp rendering
  */
+// EmailJS Setup - Replace with your real keys from Step 1
+emailjs.init(" itpnK3USNTFs3Exig");  // e.g., "user_abc123"
+const SERVICE_ID = " service_c0lf87l";  // e.g., "service_def456"
+const TEMPLATE_ID = "template_k5huwmg";  // e.g., "template_ghi789"
 
 class PortfolioApp {
   constructor() {
@@ -535,32 +539,42 @@ class PortfolioApp {
     }
     
     form._submitHandler = async (e) => {
-      e.preventDefault();
-      
-      const isValid = this.validateContactForm(form);
-      if (!isValid) {
-        this.announce('Please fix the errors in the form');
-        return;
-      }
-      
-      const formData = new FormData(form);
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
-      
-      this.setFormState(form, false, 'Sending...');
-      
-      try {
-        await this.simulateApiCall(1200, 1800);
-        this.showFormSuccess(form, 'Thank you! Your message has been sent. I\'ll get back to you within 24 hours.');
-        form.reset();
-        form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-      } catch (error) {
-        console.error('Form submission error:', error);
-        this.showFormError(form, 'Sorry, something went wrong. Please try again.');
-      } finally {
-        this.setFormState(form, true, originalText);
-      }
-    };
+  e.preventDefault();
+  
+  const isValid = this.validateContactForm(form);
+  if (!isValid) {
+    this.announce('Please fix the errors in the form');
+    return;
+  }
+  
+  const formData = new FormData(form);
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.innerHTML;
+  
+  this.setFormState(form, false, 'Sending...');
+  
+  try {
+    // Real EmailJS send - Replace simulateApiCall
+    await emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+      contact_form_name: formData.get('name'),  // Match your form field names
+      contact_form_email: formData.get('email'),
+      contact_form_service: formData.get('service') || 'General Inquiry',
+      contact_form_message: formData.get('message')
+    });
+    
+    this.showFormSuccess(form, 'Thank you! Your message has been sent. I\'ll get back to you within 24 hours.');
+    form.reset();
+    form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+  } catch (error) {
+    console.error('EmailJS submission error:', error);
+    this.showFormError(form, 'Sorry, something went wrong. Please try again.');
+  } finally {
+    this.setFormState(form, true, originalText);
+  }
+};
+
+
+
     
     form.addEventListener('submit', form._submitHandler);
   }
