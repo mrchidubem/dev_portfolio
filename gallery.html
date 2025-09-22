@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Head section: Contains metadata, title, and links to external resources like CSS and fonts. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | Joseph Chidubem Okafor</title>
   <meta name="description" content="View Joseph Chidubem Okafor's featured projects in software development and AI.">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Preconnect to Google Fonts for faster loading. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons. -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Skip link for accessibility: Allows screen reader users to jump to main content. -->
   <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- Header: Contains site branding, navigation, theme toggle, and mobile menu controls. -->
   <header class="site-header">
     <div class="header-inner">
+      <!-- Brand/Logo section. -->
       <div class="brand">
         <h1 class="logo">
           <a href="index.html" class="logo-link" aria-label="Dubicventures Home">
@@ -22,6 +29,7 @@
           </a>
         </h1>
       </div>
+      <!-- Desktop navigation menu. -->
       <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
         <ul class="nav-list-desktop">
           <li><a class="nav-link" href="index.html">Home</a></li>
@@ -32,9 +40,11 @@
           <li><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <!-- Theme toggle button for light/dark mode (note: icon is moon, suggesting switch to light). -->
       <button class="theme-toggle theme-btn" aria-label="Switch to light theme" type="button">
         <i class="fas fa-moon theme-icon"></i>
       </button>
+      <!-- Mobile navigation controls: Checkbox for toggling menu. -->
       <div class="mobile-nav-controls">
         <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true">
         <label for="nav-toggle" class="nav-burger" title="Toggle menu" aria-label="Toggle navigation menu" role="button" tabindex="0" aria-expanded="false">
@@ -43,6 +53,7 @@
           <span class="burger-line"></span>
         </label>
       </div>
+      <!-- Mobile navigation menu. -->
       <nav class="nav-mobile" role="navigation" aria-label="Mobile navigation">
         <ul class="nav-list-mobile">
           <li><a class="nav-link" href="index.html">Home</a></li>
@@ -51,14 +62,24 @@
           <li><a class="nav-link active" href="gallery.html">Gallery</a></li>
           <li><a class="nav-link" href="blog.html">Blog</a></li>
           <li><a class="nav-link" href="contact.html">Contact</a></li>
+
+           <!-- Theme toggle in mobile menu. -->
+          <li class="nav-theme-item">
+            <button class="theme-toggle theme-btn" aria-label="Switch to dark theme" type="button">
+              <i class="fas fa-sun theme-icon"></i>
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Main content area. -->
   <main id="main">
+    <!-- Projects section: Displays a gallery of featured projects with filters. -->
     <section id="projects" class="section alt-section" role="region" aria-label="Featured Projects">
       <div class="container">
+        <!-- Section header with numbering and title. -->
         <div class="section-header">
           <div class="section-number">05</div>
           <div class="section-meta">
@@ -66,17 +87,21 @@
             <p class="section-subtitle">Selected Work with Real Impact</p>
           </div>
         </div>
+        <!-- Project filters: Buttons to filter projects by category. -->
         <div class="projects-filter">
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="web">Web Development</button>
           <button class="filter-btn" data-filter="ai">AI & Automation</button>
           <button class="filter-btn" data-filter="cloud">Cloud Architecture</button>
         </div>
+        <!-- Grid of project cards. -->
         <div class="projects-grid">
+          <!-- First project card: CareCycle HMS (Web & Cloud). -->
           <article class="project-card" data-categories="web cloud" data-index="0">
             <div class="project-media">
               <img src="https://media.istockphoto.com/id/2165857670/nl/foto/trainee-doctors-and-consultant-discussing-diagnosis.jpg?s=612x612&w=0&k=20&c=dX_Mj36Ia2Pfg_curOXdLIu_cOE4qEHh7UmfFVmNurs=" alt="" style="display:none;" crossorigin="anonymous" loading="lazy" onerror="this.style.display='block'; this.parentElement.style.backgroundImage='none'; this.parentElement.style.backgroundColor='var(--color-surface-2)';">
               <div class="project-image" style="background-image: url('https://media.istockphoto.com/id/2165857670/nl/foto/trainee-doctors-and-consultant-discussing-diagnosis.jpg?s=612x612&w=0&k=20&c=dX_Mj36Ia2Pfg_curOXdLIu_cOE4qEHh7UmfFVmNurs=')"></div>
+              <!-- Overlay with project details shown on hover. -->
               <div class="project-overlay">
                 <div class="overlay-content">
                   <h3 class="overlay-title">CareCycle HMS</h3>
@@ -89,6 +114,7 @@
                 </div>
               </div>
             </div>
+            <!-- Project content below the media. -->
             <div class="project-content">
               <div class="project-header">
                 <h3 class="project-title">CareCycle Hospital Management System</h3>
@@ -98,11 +124,13 @@
                 Comprehensive hospital management system built with Django and MySQL, featuring HIPAA-compliant workflows, 
                 real-time patient monitoring, and automated reporting. Reduced administrative overhead by 30% for 500+ users.
               </p>
+              <!-- Metrics highlighting impact. -->
               <div class="project-metrics">
                 <span class="metric"><i class="fas fa-users"></i>500+ Users</span>
                 <span class="metric"><i class="fas fa-clock"></i>30% Time Saved</span>
                 <span class="metric"><i class="fas fa-server"></i>99.9% Uptime</span>
               </div>
+              <!-- Links to demo and source. -->
               <div class="project-links">
                 <a href="https://hospital-management-app-web.vercel.app/" class="btn btn-outline btn-sm" target="_blank" rel="noopener" aria-label="View Live Demo">
                   <i class="fas fa-external-link-alt"></i> Live Demo
@@ -113,10 +141,12 @@
               </div>
             </div>
           </article>
+          <!-- Second project card: Budget Buddy (AI & Web). -->
           <article class="project-card" data-categories="ai web" data-index="1">
             <div class="project-media">
               <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop&auto=format" alt="" style="display:none;" crossorigin="anonymous" loading="lazy" onerror="this.style.display='block'; this.parentElement.style.backgroundImage='none'; this.parentElement.style.backgroundColor='var(--color-surface-2)';">
               <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop&auto=format')"></div>
+              <!-- Overlay with project details. -->
               <div class="project-overlay">
                 <div class="overlay-content">
                   <h3 class="overlay-title">Budget Buddy</h3>
@@ -129,6 +159,7 @@
                 </div>
               </div>
             </div>
+            <!-- Project content. -->
             <div class="project-content">
               <div class="project-header">
                 <h3 class="project-title">Budget Buddy</h3>
@@ -138,11 +169,13 @@
                 Intelligent personal finance application with AI-powered expense categorization, predictive budgeting, 
                 and financial insights. Achieved 95% accuracy in automated transaction classification.
               </p>
+              <!-- Metrics. -->
               <div class="project-metrics">
                 <span class="metric"><i class="fas fa-brain"></i>95% Accuracy</span>
                 <span class="metric"><i class="fas fa-chart-pie"></i>Real-time Analytics</span>
                 <span class="metric"><i class="fas fa-mobile-alt"></i>Mobile Responsive</span>
               </div>
+              <!-- Links. -->
               <div class="project-links">
                 <a href="https://budget-buddy-vibe-coding.onrender.com/" class="btn btn-outline btn-sm" target="_blank" rel="noopener" aria-label="View Live Demo">
                   <i class="fas fa-external-link-alt"></i> Live Demo
@@ -153,10 +186,12 @@
               </div>
             </div>
           </article>
+          <!-- Third project card: Airbnb Clone (Web). -->
           <article class="project-card" data-categories="web" data-index="2">
             <div class="project-media">
               <img src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWlyYm5ifGVufDB8fDB8fHww" alt="" style="display:none;" crossorigin="anonymous" loading="lazy" onerror="this.style.display='block'; this.parentElement.style.backgroundImage='none'; this.parentElement.style.backgroundColor='var(--color-surface-2)';">
               <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1591825729269-caeb344f6df2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWlyYm5ifGVufDB8fDB8fHww')"></div>
+              <!-- Overlay. -->
               <div class="project-overlay">
                 <div class="overlay-content">
                   <h3 class="overlay-title">Airbnb Clone</h3>
@@ -169,6 +204,7 @@
                 </div>
               </div>
             </div>
+            <!-- Project content. -->
             <div class="project-content">
               <div class="project-header">
                 <h3 class="project-title">Airbnb Clone</h3>
@@ -178,11 +214,13 @@
                 Scalable property booking platform with user authentication, advanced search, booking management, 
                 and payment integration. Optimized APIs reduced load times by 20% and handled 1K+ concurrent listings.
               </p>
+              <!-- Metrics. -->
               <div class="project-metrics">
                 <span class="metric"><i class="fas fa-list"></i>1K+ Listings</span>
                 <span class="metric"><i class="fas fa-bolt"></i>20% Faster Load</span>
                 <span class="metric"><i class="fas fa-shield-alt"></i>Secure Payments</span>
               </div>
+              <!-- Links (demo is placeholder). -->
               <div class="project-links">
                 <a href="#" class="btn btn-outline btn-sm" aria-label="Coming Soon">
                   <i class="fas fa-eye"></i> Preview
@@ -193,10 +231,12 @@
               </div>
             </div>
           </article>
+          <!-- Fourth project card: AI Study Buddy (AI). -->
           <article class="project-card" data-categories="ai" data-index="3">
             <div class="project-media">
               <img src="https://t3.ftcdn.net/jpg/14/21/05/00/240_F_1421050018_YAdwGBCcpHky5EyT0vKeUuQYLbLFbcIq.jpg" alt="" style="display:none;" crossorigin="anonymous" loading="lazy" onerror="this.style.display='block'; this.parentElement.style.backgroundImage='none'; this.parentElement.style.backgroundColor='var(--color-surface-2)';">
               <div class="project-image" style="background-image: url('https://t3.ftcdn.net/jpg/14/21/05/00/240_F_1421050018_YAdwGBCcpHky5EyT0vKeUuQYLbLFbcIq.jpg')"></div>
+              <!-- Overlay. -->
               <div class="project-overlay">
                 <div class="overlay-content">
                   <h3 class="overlay-title">AI Study Buddy</h3>
@@ -209,6 +249,7 @@
                 </div>
               </div>
             </div>
+            <!-- Project content. -->
             <div class="project-content">
               <div class="project-header">
                 <h3 class="project-title">AI Study Buddy</h3>
@@ -218,11 +259,13 @@
                 Intelligent learning platform featuring personalized study plans, adaptive learning algorithms, 
                 and AI-powered explanations. Improved student quiz performance by 35% during beta testing.
               </p>
+              <!-- Metrics. -->
               <div class="project-metrics">
                 <span class="metric"><i class="fas fa-graduation-cap"></i>35% Score Improvement</span>
                 <span class="metric"><i class="fas fa-brain"></i>Adaptive Learning</span>
                 <span class="metric"><i class="fas fa-mobile-alt"></i>Cross-platform</span>
               </div>
+              <!-- Links. -->
               <div class="project-links">
                 <a href="http://study-assistant-ai.vercel.app" class="btn btn-outline btn-sm" target="_blank" rel="noopener" aria-label="View Live Demo">
                   <i class="fas fa-external-link-alt"></i> Live Demo
@@ -234,6 +277,7 @@
             </div>
           </article>
         </div>
+        <!-- Call-to-action to contact for projects. -->
         <div class="projects-cta">
           <a href="contact.html" class="btn btn-primary btn-lg" aria-label="Discuss Your Project">
             <span class="btn-text">Discuss Your Project</span>
@@ -244,9 +288,12 @@
     </section>
   </main>
 
+  <!-- Footer: Contains branding, links, social media, newsletter signup, and legal info. -->
   <footer class="footer" role="contentinfo">
     <div class="container">
+      <!-- Main footer content grid. -->
       <div class="footer-content">
+        <!-- Brand and social links. -->
         <div class="footer-brand">
           <h3 class="footer-logo">
             <span class="logo-primary">Dubic</span><span class="logo-secondary">ventures</span>
@@ -254,6 +301,7 @@
           <p class="footer-description">
             Engineering the future with scalable systems, intelligent automation, and innovative solutions.
           </p>
+          <!-- Social media links. -->
           <div class="footer-social">
             <a href="https://linkedin.com/in/dubicventures" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn" data-platform="linkedin">
               <i class="fab fa-linkedin"></i>
@@ -266,6 +314,7 @@
             </a>
           </div>
         </div>
+        <!-- Quick links column. -->
         <div class="footer-links">
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-list">
@@ -274,6 +323,7 @@
             <li><a href="services.html" class="footer-link">Services</a></li>
           </ul>
         </div>
+        <!-- More links column. -->
         <div class="footer-links">
           <h4 class="footer-heading">More</h4>
           <ul class="footer-list">
@@ -282,6 +332,7 @@
             <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
+        <!-- Newsletter signup form. -->
         <div class="footer-newsletter">
           <h4 class="footer-heading">Stay Updated</h4>
           <p class="newsletter-description">
@@ -299,6 +350,7 @@
           </form>
         </div>
       </div>
+      <!-- Bottom footer with copyright and credits. -->
       <div class="footer-bottom">
         <div class="footer-legal">
           <p>&copy; 2025 Joseph Chidubem Okafor. All rights reserved.</p>
@@ -308,7 +360,10 @@
     </div>
   </footer>
 
+  <!-- Live announcement div for accessibility (e.g., for dynamic updates). -->
   <div id="live-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  
+  <!-- Deferred script loading for JavaScript functionality (e.g., filtering, overlays). -->
   <script src="js/scripts.js" defer></script>
 </body>
 </html>

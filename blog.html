@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Head section: Contains metadata, title, and links to external resources like CSS and fonts. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog | Joseph Chidubem Okafor</title>
   <meta name="description" content="Read Joseph Chidubem Okafor's insights on engineering, AI, and innovation.">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Preconnect to Google Fonts for faster loading. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons. -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Skip link for accessibility: Allows screen reader users to jump to main content. -->
   <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- Header: Contains site branding, navigation, theme toggle, and mobile menu controls. -->
   <header class="site-header">
     <div class="header-inner">
+      <!-- Brand/Logo section. -->
       <div class="brand">
         <h1 class="logo">
           <a href="index.html" class="logo-link" aria-label="Dubicventures Home">
@@ -22,6 +29,7 @@
           </a>
         </h1>
       </div>
+      <!-- Desktop navigation menu. -->
       <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
         <ul class="nav-list-desktop">
           <li><a class="nav-link" href="index.html">Home</a></li>
@@ -32,9 +40,11 @@
           <li><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <!-- Theme toggle button for light/dark mode (note: icon is moon, suggesting switch to light). -->
       <button class="theme-toggle theme-btn" aria-label="Switch to light theme" type="button">
         <i class="fas fa-moon theme-icon"></i>
       </button>
+      <!-- Mobile navigation controls: Checkbox for toggling menu. -->
       <div class="mobile-nav-controls">
         <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true">
         <label for="nav-toggle" class="nav-burger" title="Toggle menu" aria-label="Toggle navigation menu" role="button" tabindex="0" aria-expanded="false">
@@ -43,6 +53,7 @@
           <span class="burger-line"></span>
         </label>
       </div>
+      <!-- Mobile navigation menu. -->
       <nav class="nav-mobile" role="navigation" aria-label="Mobile navigation">
         <ul class="nav-list-mobile">
           <li><a class="nav-link" href="index.html">Home</a></li>
@@ -51,14 +62,24 @@
           <li><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li><a class="nav-link active" href="blog.html">Blog</a></li>
           <li><a class="nav-link" href="contact.html">Contact</a></li>
+
+           <!-- Theme toggle in mobile menu. -->
+          <li class="nav-theme-item">
+            <button class="theme-toggle theme-btn" aria-label="Switch to dark theme" type="button">
+              <i class="fas fa-sun theme-icon"></i>
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Main content area. -->
   <main id="main">
+    <!-- Thought Leadership section: Displays a grid of blog post previews (insights). -->
     <section id="thought-leadership" class="section" role="region" aria-label="Thought Leadership">
       <div class="container">
+        <!-- Section header with numbering and title. -->
         <div class="section-header">
           <div class="section-number">06</div>
           <div class="section-meta">
@@ -66,7 +87,9 @@
             <p class="section-subtitle">Insights on Engineering & Innovation</p>
           </div>
         </div>
+        <!-- Grid of insight (blog post) cards. -->
         <div class="insights-grid">
+          <!-- First insight card: Scalable Microservices. -->
           <article class="insight-card" data-index="0">
             <div class="insight-media">
               <img src="https://cdn.sayonetech.com/media/media/2024/05/20/5-software-architecture-patterns-you-should-know-in-202401.jpg" alt="Scalable architecture patterns" loading="lazy">
@@ -93,6 +116,7 @@
               </a>
             </div>
           </article>
+          <!-- Second insight card: Practical AI Integration. -->
           <article class="insight-card" data-index="1">
             <div class="insight-media">
               <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F263e0c31-8ed5-40d0-b3d3-2fff6ef4f129_2912x1858.jpeg" alt="AI integration strategies" loading="lazy">
@@ -119,6 +143,7 @@
               </a>
             </div>
           </article>
+          <!-- Third insight card: DevOps at Scale. -->
           <article class="insight-card" data-index="2">
             <div class="insight-media">
               <img src="https://cdn.prod.website-files.com/64b7ba4dc9375b7b74b2135e/689096ff1aa68f532e881ea9_12.webp" alt="DevOps best practices" loading="lazy">
@@ -145,6 +170,7 @@
               </a>
             </div>
           </article>
+          <!-- Fourth insight card: How I Built My First App. -->
           <article class="insight-card" data-index="3">
             <div class="insight-media">
               <img src="https://i.ytimg.com/vi/aiXvvL1wNUc/mqdefault.jpg?days_since_epoch=20296" alt="How I Built My First App" loading="lazy">
@@ -170,6 +196,7 @@
               </a>
             </div>
           </article>
+          <!-- Fifth insight card: The Future of AI in Healthcare. -->
           <article class="insight-card" data-index="4">
             <div class="insight-media">
               <img src="https://www.mdpi.com/ijerph/ijerph-18-00271/article_deploy/html/images/ijerph-18-00271-g001.png" alt="AI in healthcare opportunities" loading="lazy">
@@ -195,6 +222,7 @@
               </a>
             </div>
           </article>
+          <!-- Sixth insight card: Mastering Cloud-Native Development. -->
           <article class="insight-card" data-index="5">
             <div class="insight-media">
               <img src="https://media2.dev.to/dynamic/image/width=1600,height=900,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq21evprdoa4rvgfe6n87.jpeg" alt="Cloud-native development practices" loading="lazy">
@@ -221,6 +249,7 @@
             </div>
           </article>
         </div>
+        <!-- Call-to-action for viewing all insights. -->
         <div class="insights-cta">
           <a href="blog.html" class="btn btn-outline btn-lg" aria-label="View All Insights">
             <span class="btn-text">View All Insights</span>
@@ -231,9 +260,12 @@
     </section>
   </main>
 
+  <!-- Footer: Contains branding, links, social media, newsletter signup, and legal info. -->
   <footer class="footer" role="contentinfo">
     <div class="container">
+      <!-- Main footer content grid. -->
       <div class="footer-content">
+        <!-- Brand and social links. -->
         <div class="footer-brand">
           <h3 class="footer-logo">
             <span class="logo-primary">Dubic</span><span class="logo-secondary">ventures</span>
@@ -241,6 +273,7 @@
           <p class="footer-description">
             Engineering the future with scalable systems, intelligent automation, and innovative solutions.
           </p>
+          <!-- Social media links. -->
           <div class="footer-social">
             <a href="https://linkedin.com/in/dubicventures" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn" data-platform="linkedin">
               <i class="fab fa-linkedin"></i>
@@ -253,6 +286,7 @@
             </a>
           </div>
         </div>
+        <!-- Quick links column. -->
         <div class="footer-links">
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-list">
@@ -261,6 +295,7 @@
             <li><a href="services.html" class="footer-link">Services</a></li>
           </ul>
         </div>
+        <!-- More links column. -->
         <div class="footer-links">
           <h4 class="footer-heading">More</h4>
           <ul class="footer-list">
@@ -269,6 +304,7 @@
             <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
+        <!-- Newsletter signup form. -->
         <div class="footer-newsletter">
           <h4 class="footer-heading">Stay Updated</h4>
           <p class="newsletter-description">
@@ -286,6 +322,7 @@
           </form>
         </div>
       </div>
+      <!-- Bottom footer with copyright and credits. -->
       <div class="footer-bottom">
         <div class="footer-legal">
           <p>&copy; 2025 Joseph Chidubem Okafor. All rights reserved.</p>
@@ -295,7 +332,10 @@
     </div>
   </footer>
 
+  <!-- Live announcement div for accessibility (e.g., for dynamic updates). -->
   <div id="live-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  
+  <!-- Deferred script loading for JavaScript functionality. -->
   <script src="js/scripts.js" defer></script>
 </body>
 </html>

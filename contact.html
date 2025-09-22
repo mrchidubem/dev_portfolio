@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Head section: Contains metadata, title, and links to external resources like CSS and fonts. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Joseph Chidubem Okafor</title>
   <meta name="description" content="Get in touch with Joseph Chidubem Okafor for your software and AI projects.">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Preconnect to Google Fonts for faster loading. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons. -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Skip link for accessibility: Allows screen reader users to jump to main content. -->
   <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- Header: Contains site branding, navigation, theme toggle, and mobile menu controls. -->
   <header class="site-header">
     <div class="header-inner">
+      <!-- Brand/Logo section. -->
       <div class="brand">
         <h1 class="logo">
           <a href="index.html" class="logo-link" aria-label="Dubicventures Home">
@@ -22,6 +29,7 @@
           </a>
         </h1>
       </div>
+      <!-- Desktop navigation menu. -->
       <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
         <ul class="nav-list-desktop">
           <li><a class="nav-link" href="index.html">Home</a></li>
@@ -32,9 +40,11 @@
           <li><a class="nav-link active" href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <!-- Theme toggle button for light/dark mode (note: icon is moon, suggesting switch to light). -->
       <button class="theme-toggle theme-btn" aria-label="Switch to light theme" type="button">
         <i class="fas fa-moon theme-icon"></i>
       </button>
+      <!-- Mobile navigation controls: Checkbox for toggling menu. -->
       <div class="mobile-nav-controls">
         <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true">
         <label for="nav-toggle" class="nav-burger" title="Toggle menu" aria-label="Toggle navigation menu" role="button" tabindex="0" aria-expanded="false">
@@ -43,6 +53,7 @@
           <span class="burger-line"></span>
         </label>
       </div>
+      <!-- Mobile navigation menu. -->
       <nav class="nav-mobile" role="navigation" aria-label="Mobile navigation">
         <ul class="nav-list-mobile">
           <li><a class="nav-link" href="index.html">Home</a></li>
@@ -51,14 +62,24 @@
           <li><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li><a class="nav-link" href="blog.html">Blog</a></li>
           <li><a class="nav-link active" href="contact.html">Contact</a></li>
+
+           <!-- Theme toggle in mobile menu. -->
+          <li class="nav-theme-item">
+            <button class="theme-toggle theme-btn" aria-label="Switch to dark theme" type="button">
+              <i class="fas fa-sun theme-icon"></i>
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Main content area. -->
   <main id="main">
+    <!-- Contact section: Provides contact information and a form for inquiries. -->
     <section id="contact" class="section" role="region" aria-label="Contact Information">
       <div class="container">
+        <!-- Section header with numbering and title. -->
         <div class="section-header">
           <div class="section-number">07</div>
           <div class="section-meta">
@@ -66,10 +87,13 @@
             <p class="section-subtitle">Let's Discuss Your Next Project</p>
           </div>
         </div>
+        <!-- Wrapper for contact info and form, likely in a grid layout. -->
         <div class="contact-wrapper">
+          <!-- Contact information sidebar: Email, phone, location, and social links. -->
           <div class="contact-info">
             <h3 class="contact-title">Connect With Me</h3>
             <div class="contact-details">
+              <!-- Email contact item. -->
               <div class="contact-item">
                 <i class="fas fa-envelope contact-icon"></i>
                 <div class="contact-text">
@@ -77,6 +101,7 @@
                   <a href="mailto:jchidubemokafor@gmail.com" class="contact-link">mrchidubem8@gmail.com</a>
                 </div>
               </div>
+              <!-- Phone contact item. -->
               <div class="contact-item">
                 <i class="fas fa-phone contact-icon"></i>
                 <div class="contact-text">
@@ -84,6 +109,7 @@
                   <a href="tel:+2347047869896" class="contact-link">+234 810 465 4836</a>
                 </div>
               </div>
+              <!-- Location contact item. -->
               <div class="contact-item">
                 <i class="fas fa-map-marker-alt contact-icon"></i>
                 <div class="contact-text">
@@ -92,6 +118,7 @@
                 </div>
               </div>
             </div>
+            <!-- Social media links for contact. -->
             <div class="contact-social">
               <a href="https://linkedin.com/in/dubicventures" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn Profile" data-platform="linkedin">
                 <i class="fab fa-linkedin"></i>
@@ -104,15 +131,19 @@
               </a>
             </div>
           </div>
+          <!-- Contact form for user inquiries. -->
           <form id="contact-form" class="contact-form" novalidate aria-label="Contact Form">
+            <!-- Name input field. -->
             <div class="form-group">
               <input type="text" id="name" name="name" placeholder="Your Name" required aria-required="true" autocomplete="name">
               <span class="form-error" aria-live="polite"></span>
             </div>
+            <!-- Email input field. -->
             <div class="form-group">
               <input type="email" id="email" name="email" placeholder="Your Email" required aria-required="true" autocomplete="email">
               <span class="form-error" aria-live="polite"></span>
             </div>
+            <!-- Service selection dropdown. -->
             <div class="form-group">
               <select id="service" name="service" required aria-required="true">
                 <option value="">Select Service</option>
@@ -123,10 +154,12 @@
               </select>
               <span class="form-error" aria-live="polite"></span>
             </div>
+            <!-- Message textarea (full-width). -->
             <div class="form-group full-width">
               <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required aria-required="true" autocomplete="off"></textarea>
               <span class="form-error" aria-live="polite"></span>
             </div>
+            <!-- Submit button. -->
             <button type="submit" class="btn btn-primary btn-lg" aria-label="Send Message">
               <span class="btn-text">Send Message</span>
               <i class="fas fa-paper-plane btn-icon"></i>
@@ -137,9 +170,12 @@
     </section>
   </main>
 
+  <!-- Footer: Contains branding, links, social media, newsletter signup, and legal info. -->
   <footer class="footer" role="contentinfo">
     <div class="container">
+      <!-- Main footer content grid. -->
       <div class="footer-content">
+        <!-- Brand and social links. -->
         <div class="footer-brand">
           <h3 class="footer-logo">
             <span class="logo-primary">Dubic</span><span class="logo-secondary">ventures</span>
@@ -147,6 +183,7 @@
           <p class="footer-description">
             Engineering the future with scalable systems, intelligent automation, and innovative solutions.
           </p>
+          <!-- Social media links. -->
           <div class="footer-social">
             <a href="https://linkedin.com/in/dubicventures" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn" data-platform="linkedin">
               <i class="fab fa-linkedin"></i>
@@ -159,6 +196,7 @@
             </a>
           </div>
         </div>
+        <!-- Quick links column. -->
         <div class="footer-links">
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-list">
@@ -167,6 +205,7 @@
             <li><a href="services.html" class="footer-link">Services</a></li>
           </ul>
         </div>
+        <!-- More links column. -->
         <div class="footer-links">
           <h4 class="footer-heading">More</h4>
           <ul class="footer-list">
@@ -175,6 +214,7 @@
             <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
+        <!-- Newsletter signup form. -->
         <div class="footer-newsletter">
           <h4 class="footer-heading">Stay Updated</h4>
           <p class="newsletter-description">
@@ -192,6 +232,7 @@
           </form>
         </div>
       </div>
+      <!-- Bottom footer with copyright and credits. -->
       <div class="footer-bottom">
         <div class="footer-legal">
           <p>&copy; 2025 Joseph Chidubem Okafor. All rights reserved.</p>
@@ -201,7 +242,10 @@
     </div>
   </footer>
 
+  <!-- Live announcement div for accessibility (e.g., for dynamic updates). -->
   <div id="live-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  
+  <!-- Deferred script loading for JavaScript functionality. -->
   <script src="js/scripts.js" defer></script>
 </body>
 </html>

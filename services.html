@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Head section: Contains metadata, title, and links to external resources like CSS and fonts. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Joseph Chidubem Okafor</title>
   <meta name="description" content="Explore Joseph Chidubem Okafor's professional services in Full-Stack Development, AI & Automation, and Cloud Architecture.">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Preconnect to Google Fonts for faster loading. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons. -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Skip link for accessibility: Allows screen reader users to jump to main content. -->
   <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- Header: Contains site branding, navigation, theme toggle, and mobile menu controls. -->
   <header class="site-header">
     <div class="header-inner">
+      <!-- Brand/Logo section. -->
       <div class="brand">
         <h1 class="logo">
           <a href="index.html" class="logo-link" aria-label="Dubicventures Home">
@@ -22,6 +29,7 @@
           </a>
         </h1>
       </div>
+      <!-- Desktop navigation menu. -->
       <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
         <ul class="nav-list-desktop">
           <li><a class="nav-link" href="index.html">Home</a></li>
@@ -32,9 +40,11 @@
           <li><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <!-- Theme toggle button for light/dark mode (note: icon is moon, suggesting switch to light). -->
       <button class="theme-toggle theme-btn" aria-label="Switch to light theme" type="button">
         <i class="fas fa-moon theme-icon"></i>
       </button>
+      <!-- Mobile navigation controls: Checkbox for toggling menu. -->
       <div class="mobile-nav-controls">
         <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-hidden="true">
         <label for="nav-toggle" class="nav-burger" title="Toggle menu" aria-label="Toggle navigation menu" role="button" tabindex="0" aria-expanded="false">
@@ -43,6 +53,7 @@
           <span class="burger-line"></span>
         </label>
       </div>
+      <!-- Mobile navigation menu (note: no theme toggle in mobile nav here). -->
       <nav class="nav-mobile" role="navigation" aria-label="Mobile navigation">
         <ul class="nav-list-mobile">
           <li><a class="nav-link" href="index.html">Home</a></li>
@@ -51,14 +62,24 @@
           <li><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li><a class="nav-link" href="blog.html">Blog</a></li>
           <li><a class="nav-link" href="contact.html">Contact</a></li>
+
+           <!-- Theme toggle in mobile menu. -->
+          <li class="nav-theme-item">
+            <button class="theme-toggle theme-btn" aria-label="Switch to dark theme" type="button">
+              <i class="fas fa-sun theme-icon"></i>
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Main content area. -->
   <main id="main">
+    <!-- Expertise section: Highlights core technical skills and specializations. -->
     <section id="expertise" class="section alt-section" role="region" aria-label="Technical Expertise">
       <div class="container">
+        <!-- Section header with numbering and title. -->
         <div class="section-header">
           <div class="section-number">03</div>
           <div class="section-meta">
@@ -66,7 +87,9 @@
             <p class="section-subtitle">Core Competencies & Specializations</p>
           </div>
         </div>
+        <!-- Grid of expertise cards. -->
         <div class="expertise-grid">
+          <!-- Full-Stack Development card. -->
           <div class="expertise-card">
             <div class="expertise-header">
               <div class="expertise-icon">
@@ -78,6 +101,7 @@
               Architecting end-to-end web applications with modern JavaScript frameworks, TypeScript, and robust backend systems. 
               Specializing in scalable architectures that handle high traffic and complex business logic.
             </p>
+            <!-- Tech tags for this expertise. -->
             <div class="expertise-tech">
               <span class="tech-tag">React</span>
               <span class="tech-tag">Next.js</span>
@@ -86,6 +110,7 @@
               <span class="tech-tag">GraphQL</span>
             </div>
           </div>
+          <!-- AI & Automation card. -->
           <div class="expertise-card">
             <div class="expertise-header">
               <div class="expertise-icon">
@@ -97,6 +122,7 @@
               Integrating machine learning models and automation workflows that enhance user experiences and streamline business processes. 
               From NLP chatbots to predictive analytics, I bring intelligence to your applications.
             </p>
+            <!-- Tech tags for this expertise. -->
             <div class="expertise-tech">
               <span class="tech-tag">TensorFlow</span>
               <span class="tech-tag">PyTorch</span>
@@ -105,6 +131,7 @@
               <span class="tech-tag">LangChain</span>
             </div>
           </div>
+          <!-- Cloud Architecture card. -->
           <div class="expertise-card">
             <div class="expertise-header">
               <div class="expertise-icon">
@@ -116,6 +143,7 @@
               Designing and implementing cloud-native solutions with a focus on scalability, security, and cost optimization. 
               Expert in microservices, serverless architectures, and DevOps practices.
             </p>
+            <!-- Tech tags for this expertise. -->
             <div class="expertise-tech">
               <span class="tech-tag">AWS</span>
               <span class="tech-tag">Docker</span>
@@ -128,8 +156,10 @@
       </div>
     </section>
 
+    <!-- Services section: Details professional service offerings. -->
     <section id="services" class="section" role="region" aria-label="Professional Services">
       <div class="container">
+        <!-- Section header. -->
         <div class="section-header">
           <div class="section-number">04</div>
           <div class="section-meta">
@@ -137,7 +167,9 @@
             <p class="section-subtitle">Strategic Solutions for Your Business</p>
           </div>
         </div>
+        <!-- Grid of service cards. -->
         <div class="services-grid">
+          <!-- Custom Software Development card. -->
           <div class="service-card">
             <div class="service-icon">
               <i class="fas fa-code-branch"></i>
@@ -147,16 +179,19 @@
               End-to-end software solutions tailored to your business needs. From MVP to enterprise-grade applications, 
               I build scalable systems that grow with your business.
             </p>
+            <!-- Feature list for this service. -->
             <ul class="service-features">
               <li><i class="fas fa-check"></i> Full-Stack Development</li>
               <li><i class="fas fa-check"></i> API Design & Integration</li>
               <li><i class="fas fa-check"></i> Performance Optimization</li>
               <li><i class="fas fa-check"></i> Cross-Platform Solutions</li>
             </ul>
+            <!-- Link to contact for more info. -->
             <a href="contact.html" class="service-link">
               Learn More <i class="fas fa-arrow-right"></i>
             </a>
           </div>
+          <!-- AI Strategy & Implementation card. -->
           <div class="service-card">
             <div class="service-icon">
               <i class="fas fa-brain"></i>
@@ -166,16 +201,19 @@
               Transform your business with intelligent automation and AI-driven insights. From chatbots to predictive 
               analytics, I implement AI solutions that deliver ROI.
             </p>
+            <!-- Feature list for this service. -->
             <ul class="service-features">
               <li><i class="fas fa-check"></i> AI Model Integration</li>
               <li><i class="fas fa-check"></i> Automation Workflows</li>
               <li><i class="fas fa-check"></i> Data Pipeline Design</li>
               <li><i class="fas fa-check"></i> Ethical AI Practices</li>
             </ul>
+            <!-- Link to contact for more info. -->
             <a href="contact.html" class="service-link">
               Learn More <i class="fas fa-arrow-right"></i>
             </a>
           </div>
+          <!-- Cloud Architecture & DevOps card. -->
           <div class="service-card">
             <div class="service-icon">
               <i class="fas fa-cloud"></i>
@@ -185,12 +223,14 @@
               Design and implement cloud-native architectures with a focus on scalability, security, and cost optimization. 
               Streamline your deployment processes with modern DevOps practices.
             </p>
+            <!-- Feature list for this service. -->
             <ul class="service-features">
               <li><i class="fas fa-check"></i> Cloud Migration</li>
               <li><i class="fas fa-check"></i> Infrastructure as Code</li>
               <li><i class="fas fa-check"></i> CI/CD Pipelines</li>
               <li><i class="fas fa-check"></i> Monitoring & Security</li>
             </ul>
+            <!-- Link to contact for more info. -->
             <a href="contact.html" class="service-link">
               Learn More <i class="fas fa-arrow-right"></i>
             </a>
@@ -200,9 +240,12 @@
     </section>
   </main>
 
+  <!-- Footer: Contains branding, links, social media, newsletter signup, and legal info. -->
   <footer class="footer" role="contentinfo">
     <div class="container">
+      <!-- Main footer content grid. -->
       <div class="footer-content">
+        <!-- Brand and social links. -->
         <div class="footer-brand">
           <h3 class="footer-logo">
             <span class="logo-primary">Dubic</span><span class="logo-secondary">ventures</span>
@@ -210,6 +253,7 @@
           <p class="footer-description">
             Engineering the future with scalable systems, intelligent automation, and innovative solutions.
           </p>
+          <!-- Social media links. -->
           <div class="footer-social">
             <a href="https://linkedin.com/in/dubicventures" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn" data-platform="linkedin">
               <i class="fab fa-linkedin"></i>
@@ -222,6 +266,7 @@
             </a>
           </div>
         </div>
+        <!-- Quick links column. -->
         <div class="footer-links">
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-list">
@@ -230,6 +275,7 @@
             <li><a href="services.html" class="footer-link">Services</a></li>
           </ul>
         </div>
+        <!-- More links column. -->
         <div class="footer-links">
           <h4 class="footer-heading">More</h4>
           <ul class="footer-list">
@@ -238,6 +284,7 @@
             <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
+        <!-- Newsletter signup form. -->
         <div class="footer-newsletter">
           <h4 class="footer-heading">Stay Updated</h4>
           <p class="newsletter-description">
@@ -255,6 +302,7 @@
           </form>
         </div>
       </div>
+      <!-- Bottom footer with copyright and credits. -->
       <div class="footer-bottom">
         <div class="footer-legal">
           <p>&copy; 2025 Joseph Chidubem Okafor. All rights reserved.</p>
@@ -264,7 +312,10 @@
     </div>
   </footer>
 
+  <!-- Live announcement div for accessibility (e.g., for dynamic updates). -->
   <div id="live-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  
+  <!-- Deferred script loading for JavaScript functionality. -->
   <script src="js/scripts.js" defer></script>
 </body>
 </html>
