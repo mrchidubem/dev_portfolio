@@ -14,8 +14,8 @@
  * UPDATED: Preload high-res images for crisp rendering
  */
 // EmailJS Setup - Replace with your real keys from Step 1
-emailjs.init(" itpnK3USNTFs3Exig");  // e.g., "user_abc123"
-const SERVICE_ID = " service_c0lf87l";  // e.g., "service_def456"
+emailjs.init("itpnK3USNTFs3Exig");  // e.g., "user_abc123"
+const SERVICE_ID = "service_c0lf87l";  // e.g., "service_def456"
 const TEMPLATE_ID = "template_k5huwmg";  // e.g., "template_ghi789"
 
 class PortfolioApp {
