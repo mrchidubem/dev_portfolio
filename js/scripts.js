@@ -11,6 +11,7 @@
  * FIXED: Mobile Theme Toggle - Added menu-state check for reliable dropdown toggling
  * UPDATED: For multi-page - Adjusted scroll navigation to page links, kept filter/form/theme
  * UPDATED: Default to light theme on load (unless user saved dark)
+ * UPDATED: Preload high-res images for crisp rendering
  */
 
 class PortfolioApp {
@@ -828,7 +829,7 @@ class PortfolioApp {
             const speed = (scrolled - lastScrollY) * -0.3;
             const currentTransform = heroBg.style.transform || 'translateY(0px)';
             const currentY = parseFloat(currentTransform.match(/translateY\((.*)px\)/)?.[1] || 0);
-            heroBg.style.transform = `translateY(${currentY + speed}px)`;
+            heroBg.style.transform = `translateY(${currentY + speed}px) translateZ(0)`; /* GPU acceleration for crispness */
           }
           
           lastScrollY = scrolled;
@@ -1012,9 +1013,16 @@ if (document.readyState === 'loading') {
   }
 }
 
-// Preload images
+// Preload images - Enhanced for high-res variants
 if ('link' in document.createElement('link')) {
   const preloadLinks = [
+    // Profile image variants
+    'images/dube-1x.jpg',
+    'images/dube-2x.jpg',
+    // Hero background variants
+    'images/hero-bg-1x.jpg',
+    'images/hero-bg-2x.jpg',
+    // Other potential high-res assets
     'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=160&h=160&fit=crop&crop=face',
     'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop&auto=format',
     'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop&auto=format',

@@ -1,4 +1,4 @@
-/* style.css - Full complete version with updates */
+/* style.css - Full complete version with updates for high-DPI crispness */
 :root {
   /* Primary Brand Colors - Navy and Teal */
   --color-primary-50: 239 246 255;
@@ -100,6 +100,29 @@
   --gradient-hero: linear-gradient(135deg, rgb(238 235 232) 0%, rgb(232 230 227) 50%, rgb(224 222 219) 100%);
 }
 
+/* High-DPI/Retina Media Query for Crisp Rendering */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .profile-image,
+  .hero-bg,
+  .project-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+  
+  .hero-bg {
+    background-image: image-set(
+      url('images/hero-bg-1x.jpg') 1x,
+      url('images/hero-bg-2x.jpg') 2x
+    ); /* Assumes 2x background image */
+  }
+  
+  /* Sharpen SVG icons */
+  [class*="fa-"] {
+    vector-effect: non-scaling-stroke;
+  }
+}
+
 /* Reset & Base Styles */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -140,6 +163,7 @@ img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
   height: auto;
+  image-rendering: auto; /* Default smooth; overridden in high-DPI */
 }
 
 input, button, select, textarea {
@@ -594,14 +618,16 @@ a:hover {
   overflow: hidden;
   margin-top: 0;
   text-align: left;
+  will-change: transform; /* Hardware acceleration for smooth parallax */
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: rgb(var(--color-surface));
+  background: rgb(var(--color-surface)) url('images/hero-bg-1x.jpg') center/cover no-repeat; /* Base background */
   z-index: -1;
   will-change: transform;
+  image-rendering: auto;
 }
 
 .hero-gradient {
@@ -762,6 +788,7 @@ a:hover {
   transform: none !important;
   border-radius: var(--border-radius-card);
   box-shadow: var(--shadow-card);
+  will-change: transform; /* For hover smoothness */
 }
 
 .profile-card:hover {
@@ -785,6 +812,7 @@ a:hover {
   object-fit: cover;
   transition: var(--transition-normal);
   border-radius: inherit;
+  image-rendering: auto; /* Smooth default */
 }
 
 .profile-ring {
@@ -863,6 +891,7 @@ a:hover {
   touch-action: manipulation;
   text-align: center;
   border-radius: var(--border-radius-card);
+  will-change: transform; /* Hardware acceleration */
 }
 
 .btn::before {
@@ -944,6 +973,7 @@ a:hover {
 .btn-icon {
   transition: var(--transition-fast);
   font-size: var(--text-sm);
+  vector-effect: non-scaling-stroke; /* Crisp icon scaling */
 }
 
 .btn:hover .btn-icon {
@@ -1124,6 +1154,7 @@ a:hover {
   color: rgb(var(--color-primary-500));
   flex-shrink: 0;
   font-size: var(--text-base);
+  vector-effect: non-scaling-stroke; /* Crisp icon */
 }
 
 .highlight-text {
@@ -1164,6 +1195,7 @@ a:hover {
   visibility: visible !important;
   transform: none !important;
   text-align: center;
+  will-change: transform;
 }
 
 .skill-item:hover {
@@ -1175,6 +1207,7 @@ a:hover {
 .skill-item i {
   font-size: 1.25rem;
   color: rgb(var(--color-primary-500));
+  vector-effect: non-scaling-stroke; /* Crisp */
 }
 
 /* Fix for skill icons in dark theme: High contrast white for visibility */
@@ -1215,6 +1248,7 @@ a:hover {
   flex-direction: column;
   border-radius: var(--border-radius-card);
   box-shadow: var(--shadow-card);
+  will-change: transform;
 }
 
 .expertise-card:hover {
@@ -1487,6 +1521,7 @@ a:hover {
   position: relative;
   border-radius: var(--border-radius-card);
   box-shadow: var(--shadow-card);
+  will-change: transform;
 }
 
 .project-card:hover {
@@ -1508,6 +1543,7 @@ a:hover {
   background-position: center;
   transition: var(--transition-normal);
   position: relative;
+  image-rendering: auto;
 }
 
 .project-card:hover .project-image {
@@ -1663,6 +1699,7 @@ a:hover {
   text-align: left;
   border-radius: var(--border-radius-card);
   box-shadow: var(--shadow-card);
+  will-change: transform;
 }
 
 .insight-card:hover {
@@ -1682,6 +1719,7 @@ a:hover {
   height: 100%;
   object-fit: cover;
   transition: var(--transition-normal);
+  image-rendering: auto;
 }
 
 .insight-card:hover .insight-media img {
@@ -1790,6 +1828,7 @@ a:hover {
 .insight-link i {
   transition: var(--transition-fast);
   font-size: var(--text-sm);
+  vector-effect: non-scaling-stroke;
 }
 
 .services-grid {
@@ -1816,6 +1855,7 @@ a:hover {
   flex-direction: column;
   border-radius: var(--border-radius-card);
   box-shadow: var(--shadow-card);
+  will-change: transform;
 }
 
 .service-card:hover {
@@ -1854,6 +1894,7 @@ a:hover {
   transition: var(--transition-normal);
   opacity: 1 !important;
   visibility: visible !important;
+  vector-effect: non-scaling-stroke;
 }
 
 .service-card:hover .service-icon {
@@ -1906,6 +1947,7 @@ a:hover {
   color: rgb(var(--color-success));
   width: 0.75rem;
   flex-shrink: 0;
+  vector-effect: non-scaling-stroke;
 }
 
 .service-link {
@@ -2030,6 +2072,7 @@ a:hover {
   font-size: var(--text-base);
   opacity: 1 !important;
   visibility: visible !important;
+  vector-effect: non-scaling-stroke;
 }
 
 .contact-text {
@@ -2313,6 +2356,7 @@ textarea {
   visibility: visible !important;
   text-align: center;
   border-radius: var(--border-radius-card);
+  will-change: transform;
 }
 
 .social-link:hover, .social-link:focus {
@@ -2324,6 +2368,7 @@ textarea {
 
 .social-link i {
   font-size: var(--text-base);
+  vector-effect: non-scaling-stroke;
 }
 
 input.error, select.error, textarea.error {
@@ -2936,6 +2981,7 @@ input.error, select.error, textarea.error {
   object-fit: cover;
   border-radius: var(--border-radius-lg);
   margin-bottom: var(--space-xl);
+  image-rendering: auto;
 }
 
 .post-meta {

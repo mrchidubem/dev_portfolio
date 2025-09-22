@@ -118,17 +118,17 @@
             <div class="hero-ctas">
               <a class="btn btn-primary btn-lg" href="contact.html">
                 <span class="btn-text">Start a Project</span>
-                <i class="fas fa-arrow-right btn-icon"></i>
+                <i class="fas fa-arrow-right btn-icon" aria-hidden="true"></i>
               </a>
               <a class="btn btn-secondary btn-lg" href="gallery.html">
                 <span class="btn-text">View My Work</span>
-                <i class="fas fa-external-link-alt btn-icon"></i>
+                <i class="fas fa-external-link-alt btn-icon" aria-hidden="true"></i>
               </a>
             </div>
             <!-- Scroll Indicator to About -->
             <div class="hero-scroll">
               <a href="about.html" class="scroll-indicator" aria-label="Scroll to About">
-                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 <span class="sr-only">Scroll to About section</span>
               </a>
             </div>
@@ -137,14 +137,23 @@
           <aside class="hero-aside">
             <div class="profile-card">
               <div class="profile-image-wrapper">
-                <img src="images/dube.jpg" alt="Joseph Chidubem Okafor, Senior Software Engineer" class="profile-image" loading="lazy">
+                <picture>
+                  <source srcset="images/dube.webp 1x, images/dube.jpg 2x" type="image/webp">
+                  <img src="images/dube.jpg" 
+                       srcset="images/dube-1x.jpg 1x, images/dube-2x.jpg 2x" 
+                       sizes="(max-width: 768px) 100vw, 380px"
+                       alt="Joseph Chidubem Okafor, Senior Software Engineer" 
+                       class="profile-image" 
+                       loading="lazy" 
+                       decoding="async">
+                </picture>
                 <div class="profile-ring"></div>
               </div>
               <div class="profile-info">
                 <h3 class="profile-name">Joseph Chidubem Okafor</h3>
                 <p class="profile-role">Software Engineer & Electronics Engineer</p>
                 <div class="profile-location">
-                  <i class="fas fa-map-marker-alt"></i>
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                   <span>Lagos, Nigeria</span>
                 </div>
               </div>
@@ -166,11 +175,11 @@
           <div class="cta-buttons">
             <a class="btn btn-primary btn-lg" href="contact.html">
               <span class="btn-text">Get Started Today</span>
-              <i class="fas fa-rocket btn-icon"></i>
+              <i class="fas fa-rocket btn-icon" aria-hidden="true"></i>
             </a>
             <a class="btn btn-outline btn-lg" href="services.html" style="border-color: rgb(225, 211, 211) ;">
               <span class="btn-text" style="color: rgb(225, 211, 211) ;"><strong class="">Explore Services</strong></span>
-              <i class="fas fa-arrow-right btn-icon"></i>
+              <i class="fas fa-arrow-right btn-icon" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -193,13 +202,13 @@
           <!-- Social Links -->
           <div class="footer-social">
             <a href="https://linkedin.com/in/dubicventures" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn" data-platform="linkedin">
-              <i class="fab fa-linkedin"></i>
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
             </a>
             <a href="https://github.com/mrchidubem" class="social-link" target="_blank" rel="noopener" aria-label="GitHub" data-platform="github">
-              <i class="fab fa-github"></i>
+              <i class="fab fa-github" aria-hidden="true"></i>
             </a>
             <a href="https://twitter.com/ChidubemOkafor17" class="social-link" target="_blank" rel="noopener" aria-label="Twitter" data-platform="twitter">
-              <i class="fab fa-twitter"></i>
+              <i class="fab fa-twitter" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -237,7 +246,7 @@
             </div>
             <button type="submit" class="btn btn-primary" aria-label="Subscribe to Newsletter">
               <span class="btn-text">Subscribe</span>
-              <i class="fas fa-arrow-right btn-icon"></i>
+              <i class="fas fa-arrow-right btn-icon" aria-hidden="true"></i>
             </button>
           </form>
         </div>
