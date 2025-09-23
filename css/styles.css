@@ -69,7 +69,8 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --shadow-card: 0 10px 25px rgba(0,0,0,0.1);
+  /* UPDATED: Softer, more mature card shadow - reduced intensity for subtlety */
+  --shadow-card: 0 4px 8px rgba(0,0,0,0.05);
   
   --transition-fast: 150ms ease-out;
   --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -778,8 +779,9 @@ a:hover {
   background: rgb(var(--color-surface));
   border-radius: var(--border-radius-lg);
   padding: var(--space-xl);
-  border: 1px solid rgb(var(--color-border) / 0.2);
-  box-shadow: var(--shadow-md);
+  /* UPDATED: Tiny soothing border + softer shadow for mature look */
+  border: 1px solid rgb(var(--color-border) / 0.3);
+  box-shadow: var(--shadow-card);
   transition: var(--transition-normal);
   width: 100%;
   max-width: 380px;
@@ -787,13 +789,12 @@ a:hover {
   visibility: visible !important;
   transform: none !important;
   border-radius: var(--border-radius-card);
-  box-shadow: var(--shadow-card);
   will-change: transform; /* For hover smoothness */
 }
 
 .profile-card:hover {
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
   transition: transform 0.3s var(--transition-ease), box-shadow 0.3s var(--transition-ease);
 }
 
@@ -1175,7 +1176,8 @@ a:hover {
   padding: var(--space-lg);
   background: rgb(var(--color-surface-2));
   border-radius: var(--border-radius-lg);
-  border: 1px solid rgb(var(--color-border) / 0.1);
+  /* UPDATED: Tiny soothing border for maturity */
+  border: 1px solid rgb(var(--color-border) / 0.3);
   justify-items: center;
   text-align: center;
   border-radius: var(--border-radius-card);
@@ -1235,7 +1237,8 @@ a:hover {
   background: rgb(var(--color-surface));
   border-radius: var(--border-radius-lg);
   padding: var(--space-xl);
-  border: 1px solid rgb(var(--color-border) / 0.1);
+  /* UPDATED: Tiny soothing border + softer shadow for mature look */
+  border: 1px solid rgb(var(--color-border) / 0.3);
   transition: var(--transition-normal);
   position: relative;
   overflow: hidden;
@@ -1253,7 +1256,7 @@ a:hover {
 
 .expertise-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
   transition: transform 0.3s var(--transition-ease), box-shadow 0.3s var(--transition-ease);
 }
 
@@ -1394,8 +1397,9 @@ a:hover {
   padding: var(--space-lg);
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  border: 1px solid rgb(var(--color-border) / 0.1);
-  box-shadow: var(--shadow-sm);
+  /* UPDATED: Tiny soothing border + softer shadow for maturity */
+  border: 1px solid rgb(var(--color-border) / 0.3);
+  box-shadow: var(--shadow-card);
   position: relative;
   opacity: 1 !important;
   visibility: visible !important;
@@ -1404,7 +1408,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   border-radius: var(--border-radius-card);
-  box-shadow: var(--shadow-card);
+  will-change: transform;
 }
 
 .timeline-header {
@@ -1509,7 +1513,8 @@ a:hover {
   background: rgb(var(--color-surface));
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  border: 1px solid rgb(var(--color-border) / 0.1);
+  /* UPDATED: Tiny soothing border + softer shadow for mature look */
+  border: 1px solid rgb(var(--color-border) / 0.3);
   transition: var(--transition-normal);
   opacity: 1 !important;
   visibility: visible !important;
@@ -1526,7 +1531,7 @@ a:hover {
 
 .project-card:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
   transition: transform 0.3s var(--transition-ease), box-shadow 0.3s var(--transition-ease);
 }
 
@@ -1688,7 +1693,8 @@ a:hover {
   background: rgb(var(--color-surface));
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  border: 1px solid rgb(var(--color-border) / 0.1);
+  /* UPDATED: Tiny soothing border + softer shadow for mature look */
+  border: 1px solid rgb(var(--color-border) / 0.3);
   transition: var(--transition-normal);
   opacity: 1 !important;
   visibility: visible !important;
@@ -1704,7 +1710,7 @@ a:hover {
 
 .insight-card:hover {
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
   transition: transform 0.3s var(--transition-ease), box-shadow 0.3s var(--transition-ease);
 }
 
@@ -1843,7 +1849,8 @@ a:hover {
   border-radius: var(--border-radius-lg);
   padding: var(--space-xl);
   text-align: center;
-  border: 1px solid rgb(var(--color-border) / 0.1);
+  /* UPDATED: Tiny soothing border + softer shadow for mature look */
+  border: 1px solid rgb(var(--color-border) / 0.3);
   transition: var(--transition-normal);
   position: relative;
   overflow: hidden;
@@ -1860,7 +1867,7 @@ a:hover {
 
 .service-card:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
   transition: transform 0.3s var(--transition-ease), box-shadow 0.3s var(--transition-ease);
 }
 
@@ -2026,7 +2033,8 @@ a:hover {
   background: rgb(var(--color-surface));
   border-radius: var(--border-radius-lg);
   padding: var(--space-xl);
-  border: 1px solid rgb(var(--color-border) / 0.1);
+  /* UPDATED: Tiny soothing border + softer shadow for maturity */
+  border: 1px solid rgb(var(--color-border) / 0.3);
   opacity: 1 !important;
   visibility: visible !important;
   text-align: left;
@@ -2116,7 +2124,8 @@ a:hover {
   background: rgb(var(--color-surface));
   border-radius: var(--border-radius-lg);
   padding: var(--space-xl);
-  border: 1px solid rgb(var(--color-border) / 0.1);
+  /* UPDATED: Tiny soothing border + softer shadow for maturity */
+  border: 1px solid rgb(var(--color-border) / 0.3);
   opacity: 1 !important;
   visibility: visible !important;
   text-align: left;
@@ -2531,6 +2540,7 @@ input.error, select.error, textarea.error {
     max-width: none;
     margin: 0 calc(-1 * var(--container-gutter)) 0;
     border-radius: 0;
+    /* UPDATED: Softer shadow on mobile too */
     box-shadow: var(--shadow-sm);
   }
   /* FIXED: Full-width stretch for profile image on mobile - rectangle for edge-to-edge */
@@ -2844,6 +2854,7 @@ input.error, select.error, textarea.error {
     max-width: none;
     margin: 0 calc(-1 * var(--container-gutter)) 0;
     border-radius: 0;
+    /* UPDATED: Softer shadow on mobile too */
     box-shadow: var(--shadow-sm);
   }
   .container {
